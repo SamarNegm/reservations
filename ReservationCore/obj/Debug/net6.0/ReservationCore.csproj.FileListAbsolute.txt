@@ -1,0 +1,12 @@
+D:\c#\reservations\ReservationCore\bin\Debug\net6.0\ReservationCore.deps.json
+D:\c#\reservations\ReservationCore\bin\Debug\net6.0\ReservationCore.dll
+D:\c#\reservations\ReservationCore\bin\Debug\net6.0\ReservationCore.pdb
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\ReservationCore.csproj.AssemblyReference.cache
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\ReservationCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\ReservationCore.AssemblyInfoInputs.cache
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\ReservationCore.AssemblyInfo.cs
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\ReservationCore.csproj.CoreCompileInputs.cache
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\ReservationCore.dll
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\refint\ReservationCore.dll
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\ReservationCore.pdb
+D:\c#\reservations\ReservationCore\obj\Debug\net6.0\ref\ReservationCore.dll

@@ -1,0 +1,61 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "HotelReservationContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "ReservationCore",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[meal_plans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[meal_plans_per_season]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[reservations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[room_type]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rooms_per_season]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[season]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "IBRAHIM-PC.HotelReservation",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

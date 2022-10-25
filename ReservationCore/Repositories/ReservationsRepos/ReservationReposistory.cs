@@ -1,4 +1,6 @@
-﻿namespace ReservationCore.Models.ReservationsRepos
+﻿using ReservationCore.Models;
+
+namespace ReservationCore.ReservationsRepos
 {
     public class ReservationReposistory : IResevationRepository
     {
@@ -9,9 +11,10 @@
             wiredContext = context;
         }
 
-        public void Add(Reservation product)
+        public void Add(Reservation reservation)
         {
-            throw new NotImplementedException();
+            wiredContext.Add(reservation);
+            wiredContext.SaveChanges();
         }
 
         public void Delete(int id)

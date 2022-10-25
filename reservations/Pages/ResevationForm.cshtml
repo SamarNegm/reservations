@@ -1,0 +1,50 @@
+﻿@using ReservationCore.Models
+@model Reservation
+
+<form method="post"  enctype="multipart/form-data">
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label asp-for="@Model.Name">Name</label>
+        <input asp-for="@Model.Name" class="form-control" />
+        <span asp-validation-for="@Model.Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Email"> Email</label>
+        <input asp-for="@Model.Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Adults">Number of Adults </label>
+        <input asp-for="@Model.Adults" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Child">Number of children </label>
+        <input asp-for="@Model.Child" class="form-control" />
+    </div>
+    <div class="mb-3">
+         <label asp-for="@Model.RoomId">Room Type</label>
+         <input asp-for="@Model.RoomId"  class="form-control"/>
+    </div>
+    <vc:meals   />
+         <div class="mb-3">
+         <label asp-for="@Model.SeasonId">Season</label>
+         <input asp-for="@Model.SeasonId" class="form-control"/>
+    </div>
+     <div class="mb-3">
+        <label asp-for="@Model.Checkin">Check in date</label>
+         <input asp-for="@Model.Checkin" type="date" class="form-control" id="checkInDate"/>
+    </div>
+    <div class="mb-3">
+         <label asp-for="@Model.Checkout">Check Out date</label>
+         <input asp-for="@Model.Checkout" type="date" class="form-control" id="checkOutDate"/>
+    </div>
+
+    @if (ViewContext.RouteData.Values["id"] is not null)
+    {
+            <button asp-page-handler="edit" class="btn btn-success">Submit</button>
+            <button asp-page-handler="delete" class="btn btn-danger float-end">Delete</button>
+    }
+    else
+    {
+            <button class="btn btn-success">Add</button>
+    }
+</form>

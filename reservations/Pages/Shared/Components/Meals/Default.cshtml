@@ -1,0 +1,10 @@
+﻿@using ReservationCore.Models
+@model List<MealPlan>
+
+<select >
+    @foreach (var item in Model)
+    {
+        <option  value="@item.Id">@item.Name</option>
+
+    }
+</select>

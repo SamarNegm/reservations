@@ -1,4 +1,6 @@
-﻿namespace ReservationCore.Models.ReservationsRepos
+﻿using ReservationCore.Models;
+
+namespace ReservationCore.ReservationsRepos
 {
     public interface IResevationRepository
     {

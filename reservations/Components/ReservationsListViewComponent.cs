@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ReservationCore.Models.ReservationsRepos;
+using ReservationCore.ReservationsRepos;
 
 namespace App.UI.Components
 {

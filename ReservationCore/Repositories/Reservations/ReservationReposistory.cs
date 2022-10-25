@@ -13,7 +13,9 @@ namespace ReservationCore.ReservationsRepos
 
         public void Add(Reservation reservation)
         {
+
             wiredContext.Add(reservation);
+
             wiredContext.SaveChanges();
         }
 

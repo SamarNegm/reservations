@@ -1,11 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using ReservationCore.Models;
 using ReservationCore.Repositories.MealsRepo;
+using ReservationCore.Repositories.RoomRepo;
+using ReservationCore.Repositories.Seasons;
 using ReservationCore.ReservationsRepos;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IResevationRepository, ReservationReposistory>();
 builder.Services.AddScoped<IMealsRepository, MealsRepository>();
+builder.Services.AddScoped<IRoomTypeRepository, RoomTypeRepository>();
+builder.Services.AddScoped<ISeasonRepository, SeasonRepository>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

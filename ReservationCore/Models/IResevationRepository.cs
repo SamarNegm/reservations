@@ -2,10 +2,10 @@
 {
     public interface IResevationRepository
     {
-        public void Add(Reservations reservation);
-        public void Update(Reservations reservation);
-        public Reservations GetById(int id);
-        public List<Reservations> GetAll();
+        public void Add(Reservation reservation);
+        public void Update(Reservation reservation);
+        public Reservation GetById(int id);
+        public List<Reservation> GetAll();
         public void Delete(int id);
     }
 }

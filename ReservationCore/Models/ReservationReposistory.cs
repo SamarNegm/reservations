@@ -9,7 +9,7 @@
             wiredContext = context;
         }
 
-        public void Add(Reservations product)
+        public void Add(Reservation product)
         {
             throw new NotImplementedException();
         }
@@ -19,17 +19,17 @@
             throw new NotImplementedException();
         }
 
-        public List<Reservations> GetAll()
+        public List<Reservation> GetAll()
         {
-            return wiredContext.Reservations.ToList();
+            return wiredContext.Reservation.ToList();
         }
 
-        public Reservations GetById(int id)
+        public Reservation GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Reservations product)
+        public void Update(Reservation product)
         {
             throw new NotImplementedException();
         }

@@ -8,12 +8,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ReservationCore.Models
 {
-    public partial class RoomType
+    public partial class MealPlan
     {
-        public RoomType()
+        public MealPlan()
         {
             Reservation = new HashSet<Reservation>();
-            SeaonsRoomPrice = new HashSet<SeaonsRoomPrice>();
+            SeasonsMealPrice = new HashSet<SeasonsMealPrice>();
         }
 
         [Key]
@@ -22,9 +22,9 @@ namespace ReservationCore.Models
         [StringLength(50)]
         public string Name { get; set; }
 
-        [InverseProperty("Room")]
+        [InverseProperty("Meal")]
         public virtual ICollection<Reservation> Reservation { get; set; }
-        [InverseProperty("Room")]
-        public virtual ICollection<SeaonsRoomPrice> SeaonsRoomPrice { get; set; }
+        [InverseProperty("MealPlan")]
+        public virtual ICollection<SeasonsMealPrice> SeasonsMealPrice { get; set; }
     }
 }

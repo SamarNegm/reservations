@@ -18,81 +18,68 @@ namespace ReservationCore.Models
         {
         }
 
-        public virtual DbSet<MealPlans> MealPlans { get; set; }
-        public virtual DbSet<MealPlansPerSeason> MealPlansPerSeason { get; set; }
-        public virtual DbSet<Reservations> Reservations { get; set; }
+        public virtual DbSet<MealPlan> MealPlan { get; set; }
+        public virtual DbSet<Reservation> Reservation { get; set; }
         public virtual DbSet<RoomType> RoomType { get; set; }
-        public virtual DbSet<RoomsPerSeason> RoomsPerSeason { get; set; }
+        public virtual DbSet<SeaonsRoomPrice> SeaonsRoomPrice { get; set; }
         public virtual DbSet<Season> Season { get; set; }
+        public virtual DbSet<SeasonsMealPrice> SeasonsMealPrice { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<MealPlans>(entity =>
+            modelBuilder.Entity<Reservation>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.HasOne(d => d.Meal)
+                    .WithMany(p => p.Reservation)
+                    .HasForeignKey(d => d.MealId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Reservation_MealPlan");
+
+                entity.HasOne(d => d.Room)
+                    .WithMany(p => p.Reservation)
+                    .HasForeignKey(d => d.RoomId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Reservation_RoomType");
+
+                entity.HasOne(d => d.Season)
+                    .WithMany(p => p.Reservation)
+                    .HasForeignKey(d => d.SeasonId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Reservation_Season");
             });
 
-            modelBuilder.Entity<MealPlansPerSeason>(entity =>
+            modelBuilder.Entity<SeaonsRoomPrice>(entity =>
+            {
+                entity.HasKey(e => new { e.RoomId, e.SeasonId });
+
+                entity.HasOne(d => d.Room)
+                    .WithMany(p => p.SeaonsRoomPrice)
+                    .HasForeignKey(d => d.RoomId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_SeaonsRoomPrice_RoomType");
+
+                entity.HasOne(d => d.Season)
+                    .WithMany(p => p.SeaonsRoomPrice)
+                    .HasForeignKey(d => d.SeasonId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_SeaonsRoomPrice_Season");
+            });
+
+            modelBuilder.Entity<SeasonsMealPrice>(entity =>
             {
                 entity.HasKey(e => new { e.MealPlanId, e.SeasonId });
 
                 entity.HasOne(d => d.MealPlan)
-                    .WithMany(p => p.MealPlansPerSeason)
+                    .WithMany(p => p.SeasonsMealPrice)
                     .HasForeignKey(d => d.MealPlanId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_meal_plans_per_season_meal_plans");
+                    .HasConstraintName("FK_SeasonsMealPrice_MealPlan");
 
                 entity.HasOne(d => d.Season)
-                    .WithMany(p => p.MealPlansPerSeason)
+                    .WithMany(p => p.SeasonsMealPrice)
                     .HasForeignKey(d => d.SeasonId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_meal_plans_per_season_season");
-            });
-
-            modelBuilder.Entity<Reservations>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.HasOne(d => d.MealPlan)
-                    .WithMany(p => p.Reservations)
-                    .HasForeignKey(d => d.MealPlanId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_reservations_reservations");
-
-                entity.HasOne(d => d.RoomTypeNavigation)
-                    .WithMany(p => p.Reservations)
-                    .HasForeignKey(d => d.RoomType)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_reservations_room_type1");
-
-                entity.HasOne(d => d.Season)
-                    .WithMany(p => p.Reservations)
-                    .HasForeignKey(d => d.SeasonId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_reservations_season");
-            });
-
-            modelBuilder.Entity<RoomsPerSeason>(entity =>
-            {
-                entity.HasKey(e => new { e.SeasonId, e.RoomType })
-                    .HasName("PK_rooms_per_season_1");
-
-                entity.HasOne(d => d.RoomTypeNavigation)
-                    .WithMany(p => p.RoomsPerSeason)
-                    .HasForeignKey(d => d.RoomType)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_rooms_per_season_room_type");
-
-                entity.HasOne(d => d.Season)
-                    .WithMany(p => p.RoomsPerSeason)
-                    .HasForeignKey(d => d.SeasonId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_rooms_per_season_season");
-            });
-
-            modelBuilder.Entity<Season>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                    .HasConstraintName("FK_SeasonsMealPrice_Season");
             });
 
             OnModelCreatingPartial(modelBuilder);

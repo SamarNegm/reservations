@@ -15,31 +15,31 @@
    "SelectedToBeGenerated": 0,
    "Tables": [
       {
-         "Name": "[dbo].[meal_plans]",
+         "Name": "[dbo].[MealPlan]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[meal_plans_per_season]",
+         "Name": "[dbo].[Reservation]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[reservations]",
+         "Name": "[dbo].[RoomType]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[room_type]",
+         "Name": "[dbo].[SeaonsRoomPrice]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[rooms_per_season]",
+         "Name": "[dbo].[Season]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[season]",
+         "Name": "[dbo].[SeasonsMealPrice]",
          "ObjectType": 0
       }
    ],
-   "UiHint": "IBRAHIM-PC.HotelReservation",
+   "UiHint": "IBRAHIM-PC.HotelReservations",
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
    "UseDbContextSplitting": false,

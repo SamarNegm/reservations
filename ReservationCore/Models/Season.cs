@@ -8,29 +8,27 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ReservationCore.Models
 {
-    [Table("season")]
     public partial class Season
     {
         public Season()
         {
-            MealPlansPerSeason = new HashSet<MealPlansPerSeason>();
-            Reservations = new HashSet<Reservations>();
-            RoomsPerSeason = new HashSet<RoomsPerSeason>();
+            Reservation = new HashSet<Reservation>();
+            SeaonsRoomPrice = new HashSet<SeaonsRoomPrice>();
+            SeasonsMealPrice = new HashSet<SeasonsMealPrice>();
         }
 
         [Key]
-        [Column("id")]
         public int Id { get; set; }
-        [Column("from", TypeName = "date")]
-        public DateTime? From { get; set; }
-        [Column("to", TypeName = "date")]
-        public DateTime? To { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime StartDate { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime EndDate { get; set; }
 
         [InverseProperty("Season")]
-        public virtual ICollection<MealPlansPerSeason> MealPlansPerSeason { get; set; }
+        public virtual ICollection<Reservation> Reservation { get; set; }
         [InverseProperty("Season")]
-        public virtual ICollection<Reservations> Reservations { get; set; }
+        public virtual ICollection<SeaonsRoomPrice> SeaonsRoomPrice { get; set; }
         [InverseProperty("Season")]
-        public virtual ICollection<RoomsPerSeason> RoomsPerSeason { get; set; }
+        public virtual ICollection<SeasonsMealPrice> SeasonsMealPrice { get; set; }
     }
 }

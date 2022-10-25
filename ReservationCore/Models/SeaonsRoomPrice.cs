@@ -8,23 +8,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ReservationCore.Models
 {
-    [Table("meal_plans_per_season")]
-    public partial class MealPlansPerSeason
+    public partial class SeaonsRoomPrice
     {
         [Key]
-        [Column("meal_plan_id")]
-        public int MealPlanId { get; set; }
+        public int RoomId { get; set; }
         [Key]
-        [Column("season_id")]
         public int SeasonId { get; set; }
-        [Column("meal_price")]
-        public double MealPrice { get; set; }
+        [Column(TypeName = "decimal(6, 2)")]
+        public decimal? Price { get; set; }
 
-        [ForeignKey("MealPlanId")]
-        [InverseProperty("MealPlansPerSeason")]
-        public virtual MealPlans MealPlan { get; set; }
+        [ForeignKey("RoomId")]
+        [InverseProperty("SeaonsRoomPrice")]
+        public virtual RoomType Room { get; set; }
         [ForeignKey("SeasonId")]
-        [InverseProperty("MealPlansPerSeason")]
+        [InverseProperty("SeaonsRoomPrice")]
         public virtual Season Season { get; set; }
     }
 }

@@ -8,45 +8,45 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = App.UI
 build_property.RootNamespace = App.UI
-build_property.ProjectDir = d:\c#\reservations\reservations\
+build_property.ProjectDir = D:\c#\reservations\reservations\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\c#\reservations\reservations
+build_property.MSBuildProjectDirectory = D:\c#\reservations\reservations
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/c\#/reservations/reservations/Pages/Error.cshtml]
+[D:/c\#/reservations/reservations/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/c\#/reservations/reservations/Pages/Index.cshtml]
+[D:/c\#/reservations/reservations/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/c\#/reservations/reservations/Pages/Privacy.cshtml]
+[D:/c\#/reservations/reservations/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/c\#/reservations/reservations/Pages/Reservation/ViewAllReservations.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25cVmlld0FsbFJlc2VydmF0aW9ucy5jc2h0bWw=
+[D:/c\#/reservations/reservations/Pages/Reservations/ViewAllReservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25zXFZpZXdBbGxSZXNlcnZhdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/c\#/reservations/reservations/Pages/Shared/Components/ReservationsList/Default.cshtml]
+[D:/c\#/reservations/reservations/Pages/Shared/Components/ReservationsList/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcUmVzZXJ2YXRpb25zTGlzdFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/c\#/reservations/reservations/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/c\#/reservations/reservations/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/c\#/reservations/reservations/Pages/_ViewImports.cshtml]
+[D:/c\#/reservations/reservations/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/c\#/reservations/reservations/Pages/_ViewStart.cshtml]
+[D:/c\#/reservations/reservations/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/c\#/reservations/reservations/Pages/Shared/_Layout.cshtml]
+[D:/c\#/reservations/reservations/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-klai636kw5

@@ -1,4 +1,4 @@
-﻿namespace ReservationCore.Models
+﻿namespace ReservationCore.Models.ReservationsRepos
 {
     public class ReservationReposistory : IResevationRepository
     {

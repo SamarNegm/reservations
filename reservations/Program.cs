@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ReservationCore.Models;
+using ReservationCore.Models.ReservationsRepos;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IResevationRepository, ReservationReposistory>();

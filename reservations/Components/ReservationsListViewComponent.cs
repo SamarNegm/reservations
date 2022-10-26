@@ -11,14 +11,10 @@ namespace App.UI.Components
         {
             this.resevationRepository = resevationRepository;
         }
-        public IViewComponentResult Invoke(int count)
+        public IViewComponentResult Invoke()
         {
             var items = resevationRepository.GetAll();
-            if (count > 0)
-            {
-                return View(items.Take(count).ToList());
 
-            }
             return View(items);
         }
     }

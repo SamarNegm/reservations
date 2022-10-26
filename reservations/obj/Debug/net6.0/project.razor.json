@@ -14262,29 +14262,14 @@
         }
       },
       {
-        "HashCode": -1556931537,
+        "HashCode": -306011305,
         "Kind": "MVC.ViewComponent",
         "Name": "__Generated__ReservationsListViewComponentTagHelper",
         "AssemblyName": "App.UI",
         "CaseSensitive": false,
         "TagMatchingRules": [
           {
-            "TagName": "vc:reservations-list",
-            "Attributes": [
-              {
-                "Name": "count"
-              }
-            ]
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "MVC.ViewComponent",
-            "Name": "count",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "count"
-            }
+            "TagName": "vc:reservations-list"
           }
         ],
         "Metadata": {

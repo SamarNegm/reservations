@@ -18,10 +18,17 @@ namespace ReservationCore.Models
         [Required]
         [StringLength(50)]
         public string Email { get; set; }
+        [Required]
         public int Adults { get; set; }
         public int? Child { get; set; }
+        [Required]
+
         public int RoomId { get; set; }
+        [Required]
+
         public int MealId { get; set; }
+        [Required]
+
         public int SeasonId { get; set; }
         [Column(TypeName = "date")]
         public DateTime Checkin { get; set; }

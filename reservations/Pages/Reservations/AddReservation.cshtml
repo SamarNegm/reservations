@@ -1,9 +1,6 @@
 ﻿@page "add-reservation"
 @model App.UI.Pages.Reservations.AddReservationModel
-@{
 
-
-}
 
 <h1>Add New Reservation</h1>
 <hr />
@@ -20,15 +17,21 @@
                         </div>
                         <div class="mb-3">
                             <label asp-for="@Model.NewReservation.Email"> Email</label>
-                            <input asp-for="@Model.NewReservation.Email" class="form-control" />
+                            <input asp-for="@Model.NewReservation.Email" class="form-control" />c
+                            <span asp-validation-for="@Model.NewReservation.Email"></span>
+
                         </div>
                         <div class="mb-3">
                             <label asp-for="@Model.NewReservation.Adults">Number of Adults </label>
                             <input asp-for="@Model.NewReservation.Adults" class="form-control"/>
+                            <span asp-validation-for="@Model.NewReservation.Adults"></span>
+
                         </div>
                         <div class="mb-3">
                             <label asp-for="@Model.NewReservation.Child">Number of children </label>
                             <input asp-for="@Model.NewReservation.Child" class="form-control" />
+                            <span asp-validation-for="@Model.NewReservation.Child"></span>
+
                         </div>
 
                         @*<vc:meals   />*@
@@ -62,11 +65,15 @@
                          <div class="mb-3">
                             <label asp-for="@Model.NewReservation.Checkin">Check in date</label>
                              <input asp-for="@Model.NewReservation.Checkin" type="date" class="form-control" id="checkInDate"/>
-                        </div>
+                            <span asp-validation-for="@Model.NewReservation.Checkin"></span>
+
+                         </div>
                         <div class="mb-3">
                              <label asp-for="@Model.NewReservation.Checkout">Check Out date</label>
                              <input asp-for="@Model.NewReservation.Checkout" type="date" class="form-control" id="checkOutDate"/>
-                        </div>
+                            <span asp-validation-for="@Model.NewReservation.Checkout"></span>
+
+                         </div>
 
                                 @if (ViewContext.RouteData.Values["id"] is not null)
                                 {
@@ -76,6 +83,10 @@
                                 else
                                 {
                                     <button class="btn btn-success">Add</button>
+                                        <button asp-page-handler="CalculateTotalPrice" class="btn btn-danger float-end">Calculate Total Price</button>
+
+                
+
                                 }
                     </form>
         </div>  

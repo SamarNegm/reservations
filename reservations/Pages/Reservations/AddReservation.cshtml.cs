@@ -45,18 +45,29 @@ namespace App.UI.Pages.Reservations
             init();
             TotalPrice = 0;
         }
-
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> CalculateTotalPrice()
         {
+            init();
+
             if (!ModelState.IsValid || NewReservation.Checkout < NewReservation.Checkin)
             {
-                init();
+                return Page();
+            }
+
+            GetReservationTotal(NewReservation);
+            return Page();
+        }
+        public async Task<IActionResult> add()
+        {
+            init();
+
+            if (!ModelState.IsValid || NewReservation.Checkout < NewReservation.Checkin)
+            {
                 return Page();
             }
 
             this.resevationRepository.Add(NewReservation);
             GetReservationTotal(NewReservation);
-            init();
             return Page();
         }
 

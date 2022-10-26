@@ -45,7 +45,7 @@ namespace App.UI.Pages.Reservations
             init();
             TotalPrice = 0;
         }
-        public async Task<IActionResult> CalculateTotalPrice()
+        public async Task<IActionResult> OnPostCalculateTotalPrice()
         {
             init();
 
@@ -57,7 +57,7 @@ namespace App.UI.Pages.Reservations
             GetReservationTotal(NewReservation);
             return Page();
         }
-        public async Task<IActionResult> add()
+        public async Task<IActionResult> OnPostAdd()
         {
             init();
 
